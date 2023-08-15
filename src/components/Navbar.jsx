@@ -279,7 +279,7 @@
 import React, { useState, useEffect } from "react";
 import { useLogout } from "../components/hooks/useLogoutHook";
 import { Link } from "react-router-dom";
-import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { useAuthContext } from "./hooks/useAuthHook";
 import { handleSearch } from "../utils/helpers";
 import { useHospitals } from "./hooks";

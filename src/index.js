@@ -13,7 +13,7 @@ import { HospitalsDataProvider } from "./components/context/HospitalsDataContext
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/Kira-frontend">
       <AuthContextProvider>
         <HospitalAuthProvider>
           <HospitalHomeProvider>
