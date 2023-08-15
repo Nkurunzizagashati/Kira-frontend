@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FormInput from "./FormInput";
-import Navbar from "./Navbar";
-import Spinner from "./Spinner";
+import FormInput from "./FormInput.jsx";
+import Navbar from "./Navbar.jsx";
+import Spinner from "./Spinner.jsx";
 import { useHospitalHomeProvider } from "./hooks";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

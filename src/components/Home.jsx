@@ -1,8 +1,8 @@
 import React from "react";
-import Card from "./Card";
-import Footer from "./Footer";
-import Header from "./Header";
-import Navbar from "./Navbar";
+import Card from "./Card.jsx";
+import Footer from "./Footer.jsx";
+import Header from "./Header.jsx";
+import Navbar from "./Navbar.jsx";
 import { useHospitals } from "./hooks";
 
 const Home = () => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import Spinner from "./Spinner";
+import Spinner from "./Spinner.jsx";
 import { BiArrowBack } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useHospitals } from "./hooks";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.jsx";
 
 const HospitalPage = () => {
   const navigate = useNavigate();

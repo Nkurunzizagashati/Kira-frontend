@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
+import Navbar from "../Navbar.jsx";
 import { useNavigate } from "react-router-dom";
-import Footer from "../Footer";
-import FormInput from "../FormInput";
+import Footer from "../Footer.jsx";
+import FormInput from "../FormInput.jsx";
 import { toast } from "react-toastify";
-import Spinner from "../Spinner";
+import Spinner from "../Spinner.jsx";
 import axios from "axios";
-import VerifyHospitalRegistration from "../VerifyHospitalRegistration";
+import VerifyHospitalRegistration from "../VerifyHospitalRegistration.jsx";
 import { useHospitals } from "../hooks";
 import { BiSolidHide, BiSolidShow } from "react-icons/bi";
 

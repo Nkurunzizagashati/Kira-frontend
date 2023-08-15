@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { NotificationContext } from "../context/Notification";
-import { HospitalHomeContext } from "../context/HospitalHomeContext";
-import { HospitalsDataContext } from "../context/HospitalsDataContext";
+import { NotificationContext } from "../context/Notification.jsx";
+import { HospitalHomeContext } from "../context/HospitalHomeContext.jsx";
+import { HospitalsDataContext } from "../context/HospitalsDataContext.jsx";
 
 const useNotification = () => {
   return useContext(NotificationContext);

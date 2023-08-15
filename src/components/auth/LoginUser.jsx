@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import FormInput from "../FormInput";
+import Navbar from "../Navbar.jsx";
+import Footer from "../Footer.jsx";
+import FormInput from "../FormInput.jsx";
 import { useNavigate } from "react-router-dom";
 import { useLogin } from "../hooks/useLoginHooks";
 
-import Spinner from "../Spinner";
+import Spinner from "../Spinner.jsx";
 import { toast } from "react-toastify";
 
 import { ToastContainer } from "react-toastify";

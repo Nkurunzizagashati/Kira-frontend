@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import FormInput from "../FormInput";
+import Navbar from "../Navbar.jsx";
+import Footer from "../Footer.jsx";
+import FormInput from "../FormInput.jsx";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BiSolidHide, BiSolidShow } from "react-icons/bi";
@@ -19,9 +19,9 @@ const LoginHospital = () => {
     setShowPassword((prev) => !prev);
   };
 
-  // const handleReload = () => {
-  //   window.location.reload();
-  // };
+  const handleReload = () => {
+    window.location.reload();
+  };
   const { email, password } = formData;
 
   const handleNavigate = () => {
@@ -48,7 +48,7 @@ const LoginHospital = () => {
       console.error(error);
     }
     if (localStorage.getItem("hospitalToken")) navigate("/hospital-home");
-    // handleReload();
+    handleReload();
   };
 
   return (
