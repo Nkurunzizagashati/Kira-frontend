@@ -31,11 +31,14 @@ const HospitalHome = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("/api/services", {
-        hospital_id: hospitalInfo._id,
-        name,
-        description,
-      });
+      const res = await axios.post(
+        "https://kira-services-api.onrender.com/api/services",
+        {
+          hospital_id: hospitalInfo._id,
+          name,
+          description,
+        }
+      );
 
       toast.success("Service Created Successfully", { autoClose: 30000 });
       handleReload();
@@ -49,7 +52,9 @@ const HospitalHome = () => {
 
   const handleViewSchedules = async () => {
     try {
-      const schedules = await axios.get(`/api/events/${hospitalInfo._id}`);
+      const schedules = await axios.get(
+        `https://kira-services-api.onrender.com/api/events/${hospitalInfo._id}`
+      );
       sessionStorage.setItem("schedules", JSON.stringify(schedules.data));
       if (schedules.data.length > 0) {
         navigate("/hospital-home/schedules");
