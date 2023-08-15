@@ -310,9 +310,9 @@ const Navbar = () => {
     }
   };
 
-  const handleSearchClick = () => {
-    setFilteredData(handleSearch(data, searchValue));
-  };
+  // const handleSearchClick = () => {
+  //   setFilteredData(handleSearch(data, searchValue));
+  // };
 
   const handleSearchValueChange = (e) => {
     setSearchValue(e.target.value);
@@ -330,13 +330,13 @@ const Navbar = () => {
               type="text"
               placeholder="Search..."
               value={searchValue}
-              className="border border-white sm:px-1 md:px-2 py-1 rounded-lg focus:outline-none focus:shadow-outline text-blue-600"
+              className="border border-white px-2 py-1 rounded-lg focus:outline-none focus:shadow-outline text-blue-600"
               onChange={handleSearchValueChange}
               onKeyDown={handleSearchInputKeyDown}
             />
-            <button>
+            {/* <button>
               <AiOutlineSearch size={25} onClick={handleSearchClick} />
-            </button>
+            </button> */}
           </div>
         )}
       </div>
