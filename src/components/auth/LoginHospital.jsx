@@ -19,9 +19,9 @@ const LoginHospital = () => {
     setShowPassword((prev) => !prev);
   };
 
-  const handleReload = () => {
-    window.location.reload();
-  };
+  // const handleReload = () => {
+  //   window.location.reload();
+  // };
   const { email, password } = formData;
 
   const handleNavigate = () => {
@@ -48,7 +48,7 @@ const LoginHospital = () => {
       console.error(error);
     }
     if (localStorage.getItem("hospitalToken")) navigate("/hospital-home");
-    handleReload();
+    // handleReload();
   };
 
   return (
