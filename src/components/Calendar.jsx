@@ -28,7 +28,7 @@ const Calendar = () => {
     async function fetchBookedEvents() {
       try {
         const response = await fetch(
-          `/api/events/booked-events/${hospitalId}/${serviceId}`,
+          `https://kira-services-api.onrender.com/api/events/booked-events/${hospitalId}/${serviceId}`,
           {
             method: "GET",
             headers: {
@@ -61,21 +61,24 @@ const Calendar = () => {
     console.log(userId);
 
     try {
-      const response = await fetch("/api/events/create-event", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: eventData.title,
-          description: eventData.description,
-          startTime: eventData.startTime,
-          endTime: eventData.endTime,
-          hospitalId: hospitalId,
-          serviceId: serviceId,
-          userId: userId,
-        }),
-      });
+      const response = await fetch(
+        "https://kira-services-api.onrender.com/api/events/create-event",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            title: eventData.title,
+            description: eventData.description,
+            startTime: eventData.startTime,
+            endTime: eventData.endTime,
+            hospitalId: hospitalId,
+            serviceId: serviceId,
+            userId: userId,
+          }),
+        }
+      );
 
       const data = await response.json();
       if (!response.ok) {

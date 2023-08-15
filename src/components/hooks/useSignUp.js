@@ -22,22 +22,25 @@ export const useSignUp = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("/api/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username,
-          email,
-          password,
-          confirmPassword,
-          phoneNumber,
-          sex,
-          status,
-          location,
-        }),
-      });
+      const response = await fetch(
+        "https://kira-services-api.onrender.com/api/user/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            email,
+            password,
+            confirmPassword,
+            phoneNumber,
+            sex,
+            status,
+            location,
+          }),
+        }
+      );
       const data = await response.json();
       if (!response.ok) {
         setLoading(false);
