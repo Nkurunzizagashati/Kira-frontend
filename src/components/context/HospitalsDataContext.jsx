@@ -12,6 +12,7 @@ const HospitalsDataProvider = ({ children }) => {
   const [showCalendar, setShowCalendar] = useState(false);
   const [serviceId, setServiceId] = useState("");
   const [showRegistration, setShowRegistration] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const fetchHospitals = async () => {
     try {
@@ -19,8 +20,10 @@ const HospitalsDataProvider = ({ children }) => {
         "https://kira-services-api.onrender.com/api/hospitals"
       );
       setData(hospitals.data);
+      setLoading(false);
     } catch (error) {
       console.error(error);
+      setLoading(false);
     }
   };
 
@@ -47,6 +50,7 @@ const HospitalsDataProvider = ({ children }) => {
         setServiceId,
         showRegistration,
         setShowRegistration,
+        loading,
       }}
     >
       {children}

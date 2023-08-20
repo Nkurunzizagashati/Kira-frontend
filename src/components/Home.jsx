@@ -6,7 +6,7 @@ import Navbar from "./Navbar.jsx";
 import { useHospitals } from "./hooks";
 
 const Home = () => {
-  const { data, filteredData } = useHospitals();
+  const { data, filteredData, loading } = useHospitals();
 
   const shuffleArray = (array) => {
     const shuffled = array.slice();
@@ -50,7 +50,7 @@ const Home = () => {
       <Header />
       <div className=" xl:px-36">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-center">
-          {renderHospitals}
+          {loading ? <p>Loading...</p> : renderHospitals}
         </div>
       </div>
       <Footer />
