@@ -4,6 +4,7 @@ import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 import Navbar from "./Navbar.jsx";
 import { useHospitals } from "./hooks";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const { data, filteredData, loading } = useHospitals();
@@ -44,6 +45,8 @@ const Home = () => {
     ? filteredHospitals()
     : noFilteredHospitals();
 
+  const strings = [".", ".", "."];
+
   return (
     <>
       <Navbar />
@@ -51,7 +54,9 @@ const Home = () => {
       <div className=" xl:px-36">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-center">
           {loading ? (
-            <p className=" text-black font-extrabold text-3xl">Loading...</p>
+            <p className=" text-black font-extrabold text-3xl text-center">
+              Loading <Typewriter words={strings} />
+            </p>
           ) : (
             renderHospitals
           )}
