@@ -50,7 +50,11 @@ const Home = () => {
       <Header />
       <div className=" xl:px-36">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 justify-center">
-          {loading ? <p>Loading...</p> : renderHospitals}
+          {loading ? (
+            <p className=" text-black font-extrabold text-3xl">Loading...</p>
+          ) : (
+            renderHospitals
+          )}
         </div>
       </div>
       <Footer />
