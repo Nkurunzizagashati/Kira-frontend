@@ -45,7 +45,7 @@ const Home = () => {
     ? filteredHospitals()
     : noFilteredHospitals();
 
-  const strings = [".", ".", "."];
+  const strings = ["...", "...", "..."];
 
   return (
     <>
